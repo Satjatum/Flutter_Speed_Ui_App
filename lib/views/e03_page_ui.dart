@@ -19,10 +19,16 @@ class _E03PageUiState extends State<E03PageUi> {
         child: Center(
           child: Column(
             children: [
-              Image.asset(
-                'assets/images/imge2.png',
-                width: double.infinity,
-                fit: BoxFit.fitWidth,
+              ClipRect(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  heightFactor: 0.65,
+                  child: Image.asset(
+                    'assets/images/imge2.png',
+                    width: double.infinity,
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
               ),
               Text(
                 "Register",
@@ -139,24 +145,35 @@ class _E03PageUiState extends State<E03PageUi> {
                   ),
                   child: Column(
                     children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Sign Up",
-                          style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                      Ink(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Color(0xffFFC52A), Color(0xffF69515)],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
                           ),
+                          borderRadius: BorderRadius.circular(15),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          fixedSize: Size(
-                            MediaQuery.of(context).size.width,
-                            55.0,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Sign Up",
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                           ),
-                          backgroundColor: Color.fromARGB(255, 249, 166, 13),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: Size(
+                              MediaQuery.of(context).size.width,
+                              55.0,
+                            ),
+                            backgroundColor: Colors.transparent,
+                            shadowColor: Colors.transparent,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
                           ),
                         ),
                       ),
@@ -176,8 +193,10 @@ class _E03PageUiState extends State<E03PageUi> {
                         left: 40,
                         right: 20,
                       ),
-                      child: Divider(
-                        color: Color.fromARGB(255, 249, 166, 13),
+                      child: Ink(
+                        child: Divider(
+                          color: Color.fromARGB(255, 249, 166, 13),
+                        ),
                       ),
                     ),
                   ),

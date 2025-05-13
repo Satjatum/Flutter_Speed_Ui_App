@@ -31,6 +31,12 @@ class _E01PageUiState extends State<E01PageUi> {
               style: GoogleFonts.libreBaskerville(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
+                shadows: [
+                  Shadow(
+                    color: Color(0xFFFAA91E),
+                    blurRadius: 3,
+                  ),
+                ],
               ),
             ),
             SizedBox(
@@ -38,37 +44,59 @@ class _E01PageUiState extends State<E01PageUi> {
             ),
             Text(
               "A “Moments of healthy sip",
+              style: GoogleFonts.roboto(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             Text(
               "The best vitamin for your health",
+              style: GoogleFonts.roboto(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             SizedBox(
               height: 200,
             ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Explore Now",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 38,
-                  ),
-                ],
+            Ink(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xffFFC52A), Color(0xffF69515)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(20),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 248, 157, 11),
-                fixedSize: Size(
-                  MediaQuery.of(context).size.width - 80,
-                  55,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Explore Now",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                      size: 38,
+                    ),
+                  ],
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  fixedSize: Size(
+                    MediaQuery.of(context).size.width - 80,
+                    55,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
               ),
             ),

@@ -114,24 +114,35 @@ class _E02PageUiState extends State<E02PageUi> {
             SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                "LOGIN",
-                style: GoogleFonts.poppins(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+            Ink(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xffFFC52A), Color(0xffF69515)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
                 ),
+                borderRadius: BorderRadius.circular(15),
               ),
-              style: ElevatedButton.styleFrom(
-                fixedSize: Size(
-                  MediaQuery.of(context).size.width - 80,
-                  55.0,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  "LOGIN",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
-                backgroundColor: Color.fromARGB(255, 249, 166, 13),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
+                style: ElevatedButton.styleFrom(
+                  fixedSize: Size(
+                    MediaQuery.of(context).size.width - 80,
+                    55.0,
+                  ),
+                  backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
                 ),
               ),
             ),
