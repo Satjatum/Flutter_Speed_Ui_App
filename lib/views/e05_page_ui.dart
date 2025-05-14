@@ -89,12 +89,13 @@ class _E05PageUiState extends State<E05PageUi> {
                 height: 10,
               ),
               Row(
-                //กำหนดจำนวนช้อง pincode
                 children: List.generate(
                   4,
                   (index) {
                     return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.only(
+                        right: 10,
+                      ),
                       child: SizedBox(
                         width: 50,
                         height: 50,

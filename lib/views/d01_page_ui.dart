@@ -90,6 +90,9 @@ class _D01PageUiState extends State<D01PageUi> {
                           style: GoogleFonts.urbanist(
                             fontSize: 15,
                             color: Color(0xFF35C2C1),
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
+                            decorationColor: Color(0xFF35C2C1),
                           ),
                         ),
                       ],

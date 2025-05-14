@@ -82,6 +82,7 @@ class _E02PageUiState extends State<E02PageUi> {
                 right: 40,
               ),
               child: TextField(
+                obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),

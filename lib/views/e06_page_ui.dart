@@ -74,6 +74,7 @@ class _E06PageUiState extends State<E06PageUi> {
                     height: 30,
                   ),
                   TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       enabledBorder: OutlineInputBorder(
@@ -97,6 +98,7 @@ class _E06PageUiState extends State<E06PageUi> {
                     height: 10,
                   ),
                   TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),

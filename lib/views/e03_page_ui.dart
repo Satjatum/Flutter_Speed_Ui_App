@@ -87,6 +87,7 @@ class _E03PageUiState extends State<E03PageUi> {
                       height: 10,
                     ),
                     TextField(
+                      obscureText: true,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),

@@ -16,6 +16,7 @@ dependencies:
   google_fonts: ^6.2.1
   font_awesome_flutter: ^10.8.0
   fluentui_system_icons: ^1.1.273
+  pin_code_fields: ^8.0.1
 
 dev_dependencies:
   flutter_test:
