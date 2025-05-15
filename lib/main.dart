@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/a01_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/a02_page_ui.dart';
 import 'package:flutter_speed_ui_app/views/b01_page_ui.dart';
 import 'package:flutter_speed_ui_app/views/b02_page_ui.dart';
 import 'package:flutter_speed_ui_app/views/b03_page_ui.dart';
@@ -24,7 +26,7 @@ class _FlutterSpeedUiAppState extends State<FlutterSpeedUiApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: B03PageUi(),
+      home: HomeUi(),
       theme: ThemeData(
         textTheme: GoogleFonts.kanitTextTheme(
           Theme.of(context).textTheme,

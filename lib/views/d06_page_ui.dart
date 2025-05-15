@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/d07_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
@@ -72,7 +73,9 @@ class _D06PageUiState extends State<D06PageUi> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(
                         Icons.arrow_back_ios,
                         color: Colors.black,
@@ -179,7 +182,14 @@ class _D06PageUiState extends State<D06PageUi> {
                     height: 40,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => D07PageUi(),
+                        ),
+                      );
+                    },
                     child: Text(
                       'Reset Password',
                       style: GoogleFonts.urbanist(

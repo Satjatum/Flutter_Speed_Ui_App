@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/d02_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class D07PageUi extends StatefulWidget {
@@ -60,7 +61,14 @@ class _D07PageUiState extends State<D07PageUi> {
                 height: 30,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => D02PageUi(),
+                    ),
+                  );
+                },
                 child: Text(
                   'Back to Login',
                   style: GoogleFonts.urbanist(

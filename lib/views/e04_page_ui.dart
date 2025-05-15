@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/e03_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/e05_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class E04PageUi extends StatefulWidget {
@@ -28,7 +30,9 @@ class _E04PageUiState extends State<E04PageUi> {
                 Padding(
                   padding: const EdgeInsets.all(30),
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     icon: Icon(
                       Icons.arrow_back_ios,
                       size: 32,
@@ -100,7 +104,14 @@ class _E04PageUiState extends State<E04PageUi> {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => E05PageUi(),
+                            ),
+                          );
+                        },
                         child: Text(
                           "Send Code",
                           style: GoogleFonts.poppins(
@@ -139,7 +150,14 @@ class _E04PageUiState extends State<E04PageUi> {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => E03PageUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Create Account",
                     style: GoogleFonts.poppins(

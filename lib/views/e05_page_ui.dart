@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/e06_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class E05PageUi extends StatefulWidget {
@@ -28,7 +29,9 @@ class _E05PageUiState extends State<E05PageUi> {
                       right: 50,
                     ),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(
                         Icons.arrow_back_ios,
                         size: 32,
@@ -155,7 +158,14 @@ class _E05PageUiState extends State<E05PageUi> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => E06PageUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Verify",
                     style: GoogleFonts.poppins(

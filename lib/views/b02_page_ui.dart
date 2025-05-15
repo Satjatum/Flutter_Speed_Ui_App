@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/b03_page_ui.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -157,12 +158,22 @@ class _B02PageUiState extends State<B02PageUi> {
               SizedBox(
                 height: 30,
               ),
-              Text(
-                "Create new account",
-                style: GoogleFonts.poppins(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xff494949),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => B03PageUi(),
+                    ),
+                  );
+                },
+                child: Text(
+                  "Create new account",
+                  style: GoogleFonts.poppins(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xff494949),
+                  ),
                 ),
               ),
               SizedBox(

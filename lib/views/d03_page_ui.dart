@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/d02_page_ui.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
@@ -73,7 +74,9 @@ class _D03PageUiState extends State<D03PageUi> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(
                         Icons.arrow_back_ios,
                         color: Colors.black,
@@ -379,11 +382,21 @@ class _D03PageUiState extends State<D03PageUi> {
                           color: Color(0xff1E232C),
                         ),
                       ),
-                      Text(
-                        'Login Now',
-                        style: GoogleFonts.urbanist(
-                          fontSize: 15,
-                          color: Color(0xff35C2C1),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => D02PageUi(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Login Now',
+                          style: GoogleFonts.urbanist(
+                            fontSize: 15,
+                            color: Color(0xff35C2C1),
+                          ),
                         ),
                       ),
                     ],

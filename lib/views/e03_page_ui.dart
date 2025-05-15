@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/e02_page.ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class E03PageUi extends StatefulWidget {
@@ -263,7 +264,14 @@ class _E03PageUiState extends State<E03PageUi> {
                     ),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => E02PageUi(),
+                        ),
+                      );
+                    },
                     child: Text(
                       "Log In",
                       style: GoogleFonts.poppins(

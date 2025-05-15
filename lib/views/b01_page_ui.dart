@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/b02_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/b03_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class B01PageUi extends StatefulWidget {
@@ -76,7 +78,14 @@ class _B01PageUiState extends State<B01PageUi> {
                     ],
                   ),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => B02PageUi(),
+                        ),
+                      );
+                    },
                     child: Text(
                       "Login",
                       style: GoogleFonts.poppins(
@@ -100,7 +109,14 @@ class _B01PageUiState extends State<B01PageUi> {
                   ),
                 ),
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => B03PageUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Register",
                     style: GoogleFonts.poppins(

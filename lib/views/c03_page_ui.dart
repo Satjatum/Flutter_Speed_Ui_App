@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/c02_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
@@ -411,11 +412,21 @@ class _C03PageUiState extends State<C03PageUi> {
                           color: Color(0xff888888),
                         ),
                       ),
-                      Text(
-                        "SIGN IN",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
-                          color: Color(0xff00B140),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => C02PageUi(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "SIGN IN",
+                          style: GoogleFonts.poppins(
+                            fontSize: 16,
+                            color: Color(0xff00B140),
+                          ),
                         ),
                       ),
                     ],
